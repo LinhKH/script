@@ -92,9 +92,9 @@
                             </div>
                             <div class="col-2 text-center">
                                 @if($blog->image != '')
-                                    <img id="image" src="{{asset('public/blog/'.$blog->image)}}" alt="" width="100px" height="80px">
+                                    <img id="image" src="{{asset('blog/'.$blog->image)}}" alt="" width="100px" height="80px">
                                 @else
-                                    <img id="image" src="{{asset('public/blog/default.png')}}" alt="" width="100px" height="80px">
+                                    <img id="image" src="{{asset('blog/default.png')}}" alt="" width="100px" height="80px">
                                 @endif
                             </div>      
                         </div>

@@ -27,9 +27,9 @@
                         </div>
                         <div class="list-image">
                             @if($blog->image != '') 
-                                <img src="{{asset('public/blog/'.$blog->image)}}" alt="{{$blog->title}}" />
+                                <img src="{{asset('blog/'.$blog->image)}}" alt="{{$blog->title}}" />
                             @else
-                                <img src="{{asset('public/blog/default.png')}}" alt="{{$blog->title}}" />
+                                <img src="{{asset('blog/default.png')}}" alt="{{$blog->title}}" />
                             @endif
                         </div>
                         <div class="list-content px-0">
@@ -80,9 +80,9 @@
                         <div class="row g-0">
                             <div class="col-md-4">
                                 @if($item->image != '')
-                                <img class="img-fluid rounded-start" src="{{asset('public/blog/'.$item->image)}}" alt="{{$item->title}}">
+                                <img class="img-fluid rounded-start" src="{{asset('blog/'.$item->image)}}" alt="{{$item->title}}">
                                 @else
-                                <img  class="img-fluid rounded-start" src="{{asset('public/blog/default.png')}}" alt="{{$item->title}}">
+                                <img  class="img-fluid rounded-start" src="{{asset('blog/default.png')}}" alt="{{$item->title}}">
                                 @endif
                             </div>
                             <div class="col-md-8">

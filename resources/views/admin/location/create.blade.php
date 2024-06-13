@@ -50,7 +50,7 @@
                                 </div>
                             </div>  
                             <div class="col-2 text-center">
-                                <img id="image" src="{{asset('public/location/default.jpg')}}" width="100px" height="100px">
+                                <img id="image" src="{{asset('location/default.jpg')}}" width="100px" height="100px">
                             </div>        
                         </div>
                     </div>

@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour Traveller</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="{{ asset('public/assets/css/materialdesignicons.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/assets/css/vendor.bundle.base.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/materialdesignicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor.bundle.base.css') }}">
     <!-- endinject -->
-    <link rel="stylesheet" href="{{ asset('public/assets/css/sweetalert-bootstrap-4.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/sweetalert-bootstrap-4.min.css') }}">
     <!-- Layout styles -->
-    <link rel="stylesheet" href="{{ asset('public/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
                             <div class="brand-logo text-center">
                                 @php $siteInfo = site_settings();  @endphp
                                 @if ($siteInfo->com_logo != '')
-                                    <img src="{{ asset('public/site-img/' . $siteInfo->com_logo) }}">
+                                    <img src="{{ asset('site-img/' . $siteInfo->com_logo) }}">
                                 @else
                                     <h3>{{ $siteInfo->com_name }}</h3>
                                 @endif
@@ -72,21 +72,21 @@
     </div>
     <!-- container-scroller -->
     <!-- jQuery UI 1.11.4 -->
-    <script src="{{ asset('public/assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <!-- jquery-validation -->
-    <script src="{{ asset('public/assets/js/jquery.validate.min.js') }}"></script>
-    <script src="{{ asset('public/assets/js/sweetalert2.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('assets/js/sweetalert2.min.js') }}"></script>
     <!-- plugins:js -->
-    <!-- <script src="{{ asset('public/assets/js/vendor.bundle.base.js') }}"></script> -->
+    <!-- <script src="{{ asset('assets/js/vendor.bundle.base.js') }}"></script> -->
     <!-- endinject -->
     <!-- Plugin js for this page -->
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="{{ asset('public/assets/js/off-canvas.js') }}"></script>
-    <script src="{{ asset('public/assets/js/hoverable-collapse.js') }}"></script>
-    <script src="{{ asset('public/assets/js/misc.js') }}"></script>
+    <script src="{{ asset('assets/js/off-canvas.js') }}"></script>
+    <script src="{{ asset('assets/js/hoverable-collapse.js') }}"></script>
+    <script src="{{ asset('assets/js/misc.js') }}"></script>
     <!-- endinject -->
-    <script src="{{ asset('public/assets/js/admin-login.js') }}"></script>
+    <script src="{{ asset('assets/js/admin-login.js') }}"></script>
     <input type="hidden" class="site-url" value="{{ url('/admin') }}"></input>
 </body>
 

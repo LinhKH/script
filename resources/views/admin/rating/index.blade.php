@@ -48,10 +48,10 @@
         @stop
 @section('pageJsScripts')
 <!-- DataTables -->
-<script src="{{asset('public/assets/js/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('public/assets/js/dataTables.bootstrap4.min.js')}}"></script>
-<script src="{{asset('public/assets/js/dataTables.responsive.min.js')}}"></script>
-<script src="{{asset('public/assets/js/responsive.bootstrap4.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/js/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{asset('assets/js/dataTables.responsive.min.js')}}"></script>
+<script src="{{asset('assets/js/responsive.bootstrap4.min.js')}}"></script>
 <script type="text/javascript">
     var table = $("#review-list").DataTable({
         processing: true,

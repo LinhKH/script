@@ -241,7 +241,7 @@
         $gallery = array_filter(explode(',', $plan->gallery));
         $gallery_array = [];
         for ($i = 0; $i < count($gallery); $i++) {
-            $g = (object) ['id' => $i + 1, 'src' => asset('public/plan/' . $gallery[$i])];
+            $g = (object) ['id' => $i + 1, 'src' => asset('plan/' . $gallery[$i])];
             array_push($gallery_array, $g);
         }
     @endphp

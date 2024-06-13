@@ -6,23 +6,23 @@
     <title>{{site_settings()->com_name}}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Bootstrap 4 -->
-    <link rel="stylesheet" href="{{asset('public/assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
      <!-- DataTables -->
-     <link rel="stylesheet" href="{{asset('public/assets/css/dataTables.bootstrap4.min.css')}}">
+     <link rel="stylesheet" href="{{asset('assets/css/dataTables.bootstrap4.min.css')}}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('public/assets/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/fontawesome-free/css/all.min.css')}}">
     <!-- Tokenfield for Bootstrap-->
-    <link rel="stylesheet" href="{{asset('public/assets/css/tokenfield.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/tokenfield.css')}}">
     <!-- DateTime picker -->
-    <link rel="stylesheet" href="{{asset('public/assets/css/jquery.datetimepicker.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/jquery.datetimepicker.min.css')}}">
     <!-- plugins:css -->
-    <link rel="stylesheet" href="{{asset('public/assets/mdi/css/materialdesignicons.min.css')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/css/vendor.bundle.base.css')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/css/sweetalert-bootstrap-4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/mdi/css/materialdesignicons.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/vendor.bundle.base.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/sweetalert-bootstrap-4.min.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="{{asset('public/assets/css/image-uploader.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/image-uploader.css')}}">
     <!-- Layout styles -->
-    <link rel="stylesheet" href="{{asset('public/assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <!-- End layout styles -->
     <style>
         .page-checkbox{
@@ -145,7 +145,7 @@
           <a class="navbar-brand brand-logo" href="#">
             @php $siteInfo = site_settings();  @endphp
             @if($siteInfo->com_logo != '')
-              <img src="{{asset('public/site-img/'.$siteInfo->com_logo)}}" alt="{{$siteInfo->com_name}}">
+              <img src="{{asset('site-img/'.$siteInfo->com_logo)}}" alt="{{$siteInfo->com_name}}">
             @else
               <h5>{{$siteInfo->com_name}}</h5>
             @endif
@@ -169,7 +169,7 @@
             <li class="nav-item nav-profile dropdown">
               <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="nav-profile-img">
-                  <img src="{{asset('public/user/default.png')}}" alt="image">
+                  <img src="{{asset('user/default.png')}}" alt="image">
                   <span class="availability-status online"></span>
                 </div>
                 <div class="nav-profile-text">

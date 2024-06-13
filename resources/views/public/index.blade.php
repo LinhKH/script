@@ -6,7 +6,7 @@
             <div class="col-md-12"> 
                 <h1>{{$banner->title}}</h1>
                 <h3>{{$banner->sub_title}}</h3>
-                <form action="{{url('/plan/')}}" class="search-form row b-search">
+                <form action="{{url('/plans/')}}" class="search-form row b-search">
                     <!-- @csrf -->
                     <div class="col-md-3 position-relative">
                         <select class="form-select form-control"name="location" id="location">
@@ -70,9 +70,9 @@
                         <div class="col-md-4">
                             <a href="{{url('plan?location='.$item->location_slug)}}" class="destination">
                                 @if($item->image != '') 
-                                <img class="img-fluid" src="{{asset('public/location/'.$item->image)}}" alt="{{$item->location}}" />
+                                <img class="img-fluid" src="{{asset('location/'.$item->image)}}" alt="{{$item->location}}" />
                                 @else
-                                <img class="img-fluid" src="{{asset('public/location/default.jpg')}}" alt="{{$item->location}}" />
+                                <img class="img-fluid" src="{{asset('location/default.jpg')}}" alt="{{$item->location}}" />
                                 @endif
                                 <div class="destination-content">
                                     <h4>{{$item->location}}</h4>

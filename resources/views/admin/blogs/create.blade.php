@@ -63,7 +63,7 @@
                                 </div>
                             </div>  
                             <div class="col-2 text-center">
-                                <img id="image" src="{{asset('public/blog/default.png')}}" width="100px" height="100px">
+                                <img id="image" src="{{asset('blog/default.png')}}" width="100px" height="100px">
                             </div>        
                         </div>
                     </div>

@@ -32,9 +32,9 @@
                         </div> 
                         <div class="col-md-3">
                             @if(empty($item->image))
-                                <img id="image" src="{{asset('public/banner/default.jpg')}}" width="100px" height="100px">
+                                <img id="image" src="{{asset('banner/default.jpg')}}" width="100px" height="100px">
                             @else
-                                <img id="image" src="{{asset('public/banner/'.$item->image)}}" width="100px" height="100px">
+                                <img id="image" src="{{asset('banner/'.$item->image)}}" width="100px" height="100px">
                             @endif
                         </div>  
                     </div> 

@@ -44,7 +44,7 @@
                                     </div>
                                 </div>
                                 <div class="col-2 text-center">
-                                    <img id="image" src="{{ asset('public/category/default.jpg') }}" width="100px"
+                                    <img id="image" src="{{ asset('category/default.jpg') }}" width="100px"
                                         height="100px">
                                 </div>
                             </div>

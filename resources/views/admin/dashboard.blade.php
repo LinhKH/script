@@ -13,7 +13,7 @@
                 <div class="col-md-4 stretch-card grid-margin">
                     <div class="card bg-gradient-danger card-img-holder text-white">
                         <div class="card-body">
-                            <img src="{{ asset('public/images/dashboard/circle.svg') }}" class="card-img-absolute"
+                            <img src="{{ asset('images/dashboard/circle.svg') }}" class="card-img-absolute"
                                 alt="circle-image" />
                             <h4 class="font-weight-normal mb-3"> <a href="{{ url('admin/users') }}" class="text-decoration-none text-white">Total User</a>  <i
                                     class="mdi mdi-chart-line mdi-24px float-right"></i>
@@ -25,7 +25,7 @@
                 <div class="col-md-4 stretch-card grid-margin">
                     <div class="card bg-gradient-info card-img-holder text-white">
                         <div class="card-body">
-                            <img src="{{ asset('public/images/dashboard/circle.svg') }}" class="card-img-absolute"
+                            <img src="{{ asset('images/dashboard/circle.svg') }}" class="card-img-absolute"
                                 alt="circle-image" />
                             <h4 class="font-weight-normal mb-3"><a href="{{ url('admin/plans') }}" class="text-decoration-none text-white">Tour Plan</a> <i
                                     class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
@@ -37,7 +37,7 @@
                 <div class="col-md-4 stretch-card grid-margin">
                     <div class="card bg-gradient-success card-img-holder text-white">
                         <div class="card-body">
-                            <img src="{{ asset('public/images/dashboard/circle.svg') }}" class="card-img-absolute"
+                            <img src="{{ asset('images/dashboard/circle.svg') }}" class="card-img-absolute"
                                 alt="circle-image" />
                             <h4 class="font-weight-normal mb-3"><a href="{{ url('admin/booking') }}" class="text-decoration-none text-white">Booking</a> <i class="mdi mdi-diamond mdi-24px float-right"></i>
                             </h4>

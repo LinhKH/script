@@ -76,9 +76,9 @@
                             </div>
                             <div class="col-2 text-center">
                                 @if($location->image != '')
-                                    <img id="image" src="{{asset('public/location/'.$location->image)}}" alt="" width="100px" height="80px">
+                                    <img id="image" src="{{asset('location/'.$location->image)}}" alt="" width="100px" height="80px">
                                 @else
-                                    <img id="image" src="{{asset('public/location/default.jpg')}}" alt="" width="100px" height="80px">
+                                    <img id="image" src="{{asset('location/default.jpg')}}" alt="" width="100px" height="80px">
                                 @endif
                             </div>      
                         </div>

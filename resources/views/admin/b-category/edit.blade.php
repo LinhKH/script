@@ -51,9 +51,9 @@
                             </div>
                             <div class="col-2 text-center">
                                 @if($category->banner_img != '')
-                                    <img id="image" src="{{asset('public/b-category/'.$category->banner_img)}}" alt="" width="100px" height="80px">
+                                    <img id="image" src="{{asset('b-category/'.$category->banner_img)}}" alt="" width="100px" height="80px">
                                 @else
-                                    <img id="image" src="{{asset('public/b-category/default.jpg')}}" alt="" width="100px" height="80px">
+                                    <img id="image" src="{{asset('b-category/default.jpg')}}" alt="" width="100px" height="80px">
                                 @endif
                             </div> 
                             <div class="col-12">     

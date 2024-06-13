@@ -28,9 +28,9 @@
                         </div> 
                         <div class="col-md-3">
                             @if(empty($item->com_logo))
-                                <img id="image" src="{{asset('public/site-img/default.jpg')}}" width="100px" >
+                                <img id="image" src="{{asset('site-img/default.jpg')}}" width="100px" >
                             @else
-                                <img id="image" src="{{asset('public/site-img/'.$item->com_logo)}}" width="100px">
+                                <img id="image" src="{{asset('site-img/'.$item->com_logo)}}" width="100px">
                             @endif
                         </div>     
                     </div>

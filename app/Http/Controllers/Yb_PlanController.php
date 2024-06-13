@@ -213,7 +213,7 @@ class Yb_PlanController extends Controller
 
         // If there are multiple gallery images, you can use a loop to delete them like this:
         $galleryImages = explode(',', $imagePath->gallery); // Get the array of gallery image names
-        $galleryPath = public_path() . '/plan/'; // Set the path of the gallery folder
+        $galleryPath = public_path() . '/plans/'; // Set the path of the gallery folder
 
         foreach ($galleryImages as $image) {
             $imagePath = $galleryPath . $image; // Set the path of the gallery image to delete

@@ -11,9 +11,9 @@
             <div class="col-md-3">
                 <div class="user-image">
                     @if($user->image != '')
-                        <img id="image" src="{{asset('public/user/'.$user->image)}}">
+                        <img id="image" src="{{asset('user/'.$user->image)}}">
                     @else
-                        <img id="image" src="{{asset('public/user/default.png')}}">
+                        <img id="image" src="{{asset('user/default.png')}}">
                     @endif
                     <input type="file" name="img" onChange="readURL(this);">
                     <input type="text" name="old_img" hidden value="{{$user->image}}">

@@ -19,9 +19,9 @@
                         <div class="list-image">
                             @php $gallery = array_filter(explode(',',$plan->gallery)); @endphp
                             @if (empty($gallery))
-                                <img src="{{ asset('public/plan/default.png') }}" alt="">
+                                <img src="{{ asset('plan/default.png') }}" alt="">
                             @else
-                                <img src="{{ asset('public/plan/' . $gallery[0]) }}" />
+                                <img src="{{ asset('plan/' . $gallery[0]) }}" />
                             @endif
                         </div>
                         <div class="list-content px-0">

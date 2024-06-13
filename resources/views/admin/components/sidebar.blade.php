@@ -7,7 +7,7 @@
                 <a href="#" class="nav-link">
                     <div class="nav-profile-image">
                         <!-- <img src="assets/images/faces/face1.jpg" alt="image" class="profile"> -->
-                        <img src="{{asset('public/user/default.png')}}" alt="image" class="profile">
+                        <img src="{{asset('user/default.png')}}" alt="image" class="profile">
                         <span class="login-status online"></span>
                         <!--change to offline or busy as needed-->
                     </div>

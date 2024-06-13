@@ -35,19 +35,19 @@
                         <div class="list-image">
                             @php $gallery = array_filter(explode(',',$plan->gallery)); @endphp
                             @if (empty($gallery))
-                                <img src="{{ asset('public/plan/default.png') }}" alt="">
+                                <img src="{{ asset('plan/default.png') }}" alt="">
                             @else
                                 <div class="flexslider">
                                     <ul class="slides">
                                         @for ($i = 0; $i < count($gallery); $i++)
-                                            <li data-thumb="{{ asset('public/plan/' . $gallery[$i]) }}">
-                                                <img src="{{ asset('public/plan/' . $gallery[$i]) }}" />
+                                            <li data-thumb="{{ asset('plan/' . $gallery[$i]) }}">
+                                                <img src="{{ asset('plan/' . $gallery[$i]) }}" />
                                             </li>
                                         @endfor
                                     </ul>
                                 </div>
                             @endif
-                            <!-- <img src="{{ asset('public/plan/default.jpg') }}" alt=""> -->
+                            <!-- <img src="{{ asset('plan/default.jpg') }}" alt=""> -->
                         </div>
                         <div class="list-content px-0">
                             <div class="inner-content">
@@ -96,10 +96,10 @@
                             <!-- Comment Row -->
                             <div class="d-flex flex-row comment-row m-t-0">
                                 @if ($star->image != '')
-                                    <div class="p-2"><img src="{{ asset('public/user/' . $star->image) }}"
+                                    <div class="p-2"><img src="{{ asset('user/' . $star->image) }}"
                                             alt="user" width="50" class="rounded-circle"></div>
                                 @else
-                                    <div class="p-2"><img src="{{ asset('public/user/default.png') }}"
+                                    <div class="p-2"><img src="{{ asset('user/default.png') }}"
                                             alt="user" width="50" class="rounded-circle"></div>
                                 @endif
                                 <div class="comment-text w-100">

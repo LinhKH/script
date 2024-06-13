@@ -46,12 +46,12 @@ Route::group(['middleware' => 'protectedPage'], function () {
 
 
 Route::get('/', [Yb_HomeController::class, 'index']);
-Route::get('plan', [Yb_HomeController::class, 'yb_category']);
+Route::get('/plans', [Yb_HomeController::class, 'yb_category']);
 Route::get('contact', [Yb_HomeController::class, 'yb_contact']);
 Route::post('contact', [Yb_HomeController::class, 'yb_contactStore']);
-Route::get('/plan/{slug}/checkout', [Yb_UserController::class, 'yb_checkout']);
-// Route::get('/plan/{slug}/checkout/confirm', [Yb_UserController::class, 'store']);
-Route::post('/plan/{slug}/checkout', [Yb_UserController::class, 'payWithStripe']);
+Route::get('/plans/{slug}/checkout', [Yb_UserController::class, 'yb_checkout']);
+// Route::get('/plans/{slug}/checkout/confirm', [Yb_UserController::class, 'store']);
+Route::post('/plans/{slug}/checkout', [Yb_UserController::class, 'payWithStripe']);
 
 Route::get('stripe/success', [Yb_UserController::class, 'stripeSuccess'])->name('stripe.success');
 Route::get('stripe/cancel', [Yb_UserController::class, 'stripeCancel'])->name('stripe.cancel');

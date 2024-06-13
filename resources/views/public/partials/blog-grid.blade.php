@@ -1,9 +1,9 @@
 <div class="blog-info h-100">
     <div class="blog-img">
         @if($item->image != '') 
-        <img src="{{asset('public/blog/'.$item->image)}}" alt="{{$item->title}}" />
+        <img src="{{asset('blog/'.$item->image)}}" alt="{{$item->title}}" />
         @else
-        <img src="{{asset('public/blog/default.png')}}" alt="{{$item->title}}" />
+        <img src="{{asset('blog/default.png')}}" alt="{{$item->title}}" />
         @endif
     </div>
     <div class="blog-content">

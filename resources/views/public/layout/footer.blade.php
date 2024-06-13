@@ -15,7 +15,7 @@
                                 @php $plan = plan_pages(); @endphp
                                 @if($plan->isNotEmpty())
                                     @foreach($plan as $item)
-                                        <li><a href="{{url('/plan/'.$item->title_slug)}}">{{$item->title_slug}}</a></li>
+                                        <li><a href="{{url('/plans/'.$item->title_slug)}}">{{$item->title_slug}}</a></li>
                                     @endforeach
                                 @endif
                             </ul>
@@ -49,16 +49,16 @@
             </div>
         </footer>  
     </div>
-    <script src="{{asset('public/assets/js/jquery.min.js')}}"></script>
-    <script src="{{asset('public/assets/public/js/popper.min.js')}}"></script>
-    <script src="{{asset('public/assets/public/js/bootstrap5.0.2.min.js')}}"></script>
-    <script src="{{asset('public/assets/public/js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('public/assets/public/js/jquery.flexslider-min.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/public/js/popper.min.js')}}"></script>
+    <script src="{{asset('assets/public/js/bootstrap5.0.2.min.js')}}"></script>
+    <script src="{{asset('assets/public/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('assets/public/js/jquery.flexslider-min.js')}}"></script>
     <!-- jquery-validation -->
-    <script src="{{asset('public/assets/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.validate.min.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js"></script>
       <!-- user.js -->
-    <script src="{{asset('public/assets/js/action.js')}}"></script>
+    <script src="{{asset('assets/js/action.js')}}"></script>
     <input type="hidden" class="site-url" value="{{url('/')}}"></input>
     <script>
         $(document).ready(function(){

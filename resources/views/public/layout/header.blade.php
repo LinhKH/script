@@ -9,12 +9,12 @@
     <title>@yield('title'){{$siteInfo->com_name}}</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('public/assets/public/css/bootstrap5.0.min.css')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/css/owl.carousel.css')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/css/owl.theme.default.css')}}">
-    <link rel="stylesheet" href="{{asset('public/assets/public/css/flexslider.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/public/css/bootstrap5.0.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/owl.theme.default.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/public/css/flexslider.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="{{asset('public/assets/public/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/public/css/style.css')}}">
 </head>
 <body>
     <div id="wrapper">
@@ -58,7 +58,7 @@
                 <div class="container">
                     <a class="navbar-brand" href="{{url('/')}}">
                         @if(empty($siteInfo->com_logo == ''))
-                        <img src="{{asset('public/site-img/'.$siteInfo->com_logo)}}">
+                        <img src="{{asset('site-img/'.$siteInfo->com_logo)}}">
                         @else
                         {{$siteInfo->com_name}}
                         @endif
@@ -72,7 +72,7 @@
                                 <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" aria-current="page" href="{{url('/')}}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ request()->is('plan*') ? 'active' : '' }}" href="{{url('plan')}}">Plans</a>
+                                <a class="nav-link {{ request()->is('plan*') ? 'active' : '' }}" href="{{url('plans')}}">Plans</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {{ request()->is('blogs*') ? 'active' : '' }}" href="{{url('blogs')}}">Blog</a>
