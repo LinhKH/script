@@ -43,7 +43,7 @@ class Yb_AdminController extends Controller
                 }
             }
         } else {
-            return view('admin.admin');
+            return view('admin.admin_login');
         }
     }
 

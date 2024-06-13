@@ -386,7 +386,7 @@ $(function () {
         submitHandler: function (form) {
             var formdata = new FormData(form);
             $.ajax({
-                url: uRL + '/admin/b-categories',
+                url: uRL + '/admin/b-category',
                 type: 'POST',
                 data: formdata,
                 processData: false,
@@ -397,7 +397,7 @@ $(function () {
                             icon: 'success',
                             title: 'Added Succesfully.'
                         });
-                        setTimeout(function () { window.location.href = uRL + '/admin/b-categories'; }, 1000)
+                        setTimeout(function () { window.location.href = uRL + '/admin/b-category'; }, 1000)
                     }
                 },
                 error: function (error) {
@@ -434,7 +434,7 @@ $(function () {
                             icon: 'success',
                             title: 'Updated Succesfully.'
                         });
-                        setTimeout(function () { window.location.href = uRL + '/admin/b-categories'; }, 1000);
+                        setTimeout(function () { window.location.href = uRL + '/admin/b-category'; }, 1000);
                     }
                 },
                 error: function (error) {
@@ -445,7 +445,7 @@ $(function () {
     });
 
     $(document).on("click", ".delete-blogCat", function () {
-        destroy_data($(this), 'b-categories/')
+        destroy_data($(this), 'b-category/')
     });
 
     // ========================================

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Category;
 use App\Http\Requests\CategoryRequest;
 use App\Models\Plan;
@@ -17,22 +18,22 @@ class Yb_CategoryController extends Controller
     {
         //
         if ($request->ajax()) {
-            $data = Category::orderBy('id','desc')->get();
-                    return Datatables::of($data)
-                    ->addIndexColumn()
-                    ->editColumn('status', function($row){
-                    if($row->status == '1'){
+            $data = Category::orderBy('id', 'desc')->get();
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->editColumn('status', function ($row) {
+                    if ($row->status == '1') {
                         $status = '<label class="badge badge-gradient-info">Active</label>';
-                    }else{
+                    } else {
                         $status = '<label class="badge badge-gradient-danger">Inactive</label>';
                     }
                     return $status;
                 })
-                ->addColumn('action', function($row){
-                    $btn = '<a href="categories/'.$row->id.'/edit" class="btn btn-success btn-sm">Edit</a> <a href="javascript:void(0)" class="delete-category btn btn-danger btn-sm" data-id="'.$row->id.'">Delete</a>';
+                ->addColumn('action', function ($row) {
+                    $btn = '<a href="categories/' . $row->id . '/edit" class="btn btn-success btn-sm">Edit</a> <a href="javascript:void(0)" class="delete-category btn btn-danger btn-sm" data-id="' . $row->id . '">Delete</a>';
                     return $btn;
                 })
-                ->rawColumns(['status','action'])
+                ->rawColumns(['status', 'action'])
                 ->make(true);
         }
         return view('admin.category.index');
@@ -54,16 +55,16 @@ class Yb_CategoryController extends Controller
     {
         //
 
-        if($request->img){
-            $image = rand().$request->img->getClientOriginalName();
-            $request->img->move(public_path('category'),$image);
-        }else {
+        if ($request->img) {
+            $image = rand() . $request->img->getClientOriginalName();
+            $request->img->move(public_path('category'), $image);
+        } else {
             $image = "";
         }
 
         $category = new Category();
         $category->title = $request->title;
-        $category->title_slug = str_replace(' ','-',strtolower($request->title));
+        $category->title_slug = str_replace(' ', '-', strtolower($request->title));
         $category->banner_img = $image;
         $result = $category->save();
         return $result;
@@ -83,8 +84,8 @@ class Yb_CategoryController extends Controller
     public function edit(string $id)
     {
         //
-        $category = Category::where(['id'=>$id])->first();
-        return view('admin.category.edit',['category'=>$category]);
+        $category = Category::where(['id' => $id])->first();
+        return view('admin.category.edit', ['category' => $category]);
     }
 
     /**
@@ -94,26 +95,26 @@ class Yb_CategoryController extends Controller
     {
         //
         // Update category Image
-        if($request->img != ''){        
-            $path = public_path().'/category/';
+        if ($request->img != '') {
+            $path = public_path() . '/category/';
             //code for remove old file
-            if($request->old_img != ''  && $request->old_img != null){
-                $file_old = $path.$request->old_img;
-                if(file_exists($file_old)){
+            if ($request->old_img != ''  && $request->old_img != null) {
+                $file_old = $path . $request->old_img;
+                if (file_exists($file_old)) {
                     unlink($file_old);
                 }
             }
             //upload new file
             $file = $request->img;
-            $image = rand().$request->img->getClientOriginalName();
+            $image = rand() . $request->img->getClientOriginalName();
             $file->move($path, $image);
-        }else{
+        } else {
             $image = $request->old_img;
         }
 
-        $category = Category::where(['id'=>$id])->update([
-            "title"=>$request->input('title'),
-            "title_slug"=>str_replace(' ','-',strtolower($request->input('slug'))),
+        $category = Category::where(['id' => $id])->update([
+            "title" => $request->input('title'),
+            "title_slug" => str_replace(' ', '-', strtolower($request->input('slug'))),
             "banner_img" => $image,
             "status" => $request->input("status"),
         ]);
@@ -127,14 +128,14 @@ class Yb_CategoryController extends Controller
     {
         //
         $imagePath = Category::select('banner_img')->where('id', $id)->first();
-        $filePath = public_path().'/category/'.$imagePath->banner_img;
+        $filePath = public_path() . '/category/' . $imagePath->banner_img;
         File::delete($filePath);
 
-        $check =  Plan::where('category','=',$id)->first();
-        if($check === null){
-            $destroy = Category::where(['id'=>$id])->delete();
+        $check =  Plan::where('category', '=', $id)->first();
+        if ($check === null) {
+            $destroy = Category::where(['id' => $id])->delete();
             return $destroy;
-        }else{
+        } else {
             return response()->json("You don't delete this, This Category is used in Tour Plan");
         }
     }

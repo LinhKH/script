@@ -6,7 +6,7 @@
         <!-- Content Header (Page header) -->
         @component('admin.components.content-header',['breadcrumb'=>['Dashboard'=>'admin/dashboard']])
             @slot('title') Blog Category @endslot
-            @slot('add_btn') <a href="{{url('admin/b-categories/create')}}" class="btn btn-primary btn-sm">Add New</a> @endslot
+            @slot('add_btn') <a href="{{url('admin/b-category/create')}}" class="btn btn-primary btn-sm">Add New</a> @endslot
             @slot('active') Blog Category @endslot
         @endcomponent
         <div class="row">
@@ -32,7 +32,7 @@
     var table = $("#BlogCat-list").DataTable({
         processing: true,
         serverSide: true,
-        ajax: "b-categories",
+        ajax: "b-category",
         columns: [
             {data: 'DT_RowIndex', name: 'DT_RowIndex',sWidth: '40px'},
             {data: 'title', name: 'category'},

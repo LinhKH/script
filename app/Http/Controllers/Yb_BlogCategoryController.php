@@ -30,7 +30,7 @@ class Yb_BlogCategoryController extends Controller
                     return $status;
                 })
                 ->addColumn('action', function($row){
-                    $btn = '<a href="b-categories/'.$row->id.'/edit" class="btn btn-success btn-sm">Edit</a> <a href="javascript:void(0)" class="delete-blogCat btn btn-danger btn-sm" data-id="'.$row->id.'">Delete</a>';
+                    $btn = '<a href="b-category/'.$row->id.'/edit" class="btn btn-success btn-sm">Edit</a> <a href="javascript:void(0)" class="delete-blogCat btn btn-danger btn-sm" data-id="'.$row->id.'">Delete</a>';
                     return $btn;
                 })
                 ->rawColumns(['status','action'])

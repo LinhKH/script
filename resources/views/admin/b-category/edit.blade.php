@@ -5,7 +5,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    @component('admin.components.content-header',['breadcrumb'=>['Dashboard'=>'admin/dashboard','Blog Category'=>'admin/b-categories']])
+    @component('admin.components.content-header',['breadcrumb'=>['Dashboard'=>'admin/dashboard','Blog Category'=>'admin/b-category']])
         @slot('title') Edit Blog Category @endslot
         @slot('add_btn')  @endslot
         @slot('active') Edit Blog Category @endslot
@@ -21,7 +21,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Category Title</label>
-                                    <input type="text" hidden class="url" value="{{url('admin/b-categories/'.$category->id)}}">
+                                    <input type="text" hidden class="url" value="{{url('admin/b-category/'.$category->id)}}">
                                     <input type="text" class="form-control form-control-sm" name="title" value="{{$category->title}}" placeholder="Enter Blog Category Title">
                                 </div>
                             </div>

@@ -72,10 +72,10 @@
                                 <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" aria-current="page" href="{{url('/')}}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ request()->is('plan') ? 'active' : '' }}" href="{{url('plan')}}">Plans</a>
+                                <a class="nav-link {{ request()->is('plan*') ? 'active' : '' }}" href="{{url('plan')}}">Plans</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ request()->is('blogs') ? 'active' : '' }}" href="{{url('blogs')}}">Blog</a>
+                                <a class="nav-link {{ request()->is('blogs*') ? 'active' : '' }}" href="{{url('blogs')}}">Blog</a>
                             </li>
                             @php $pages = site_pages(); @endphp
                             @if($pages->isNotEmpty())

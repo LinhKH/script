@@ -25,7 +25,7 @@ Route::group(['middleware' => 'protectedPage'], function () {
     Route::resource('admin/categories', Yb_CategoryController::class);
     Route::resource('admin/plans', Yb_PlanController::class);
     Route::resource('admin/blogs', Yb_BlogController::class);
-    Route::resource('admin/b-categories', Yb_BlogCategoryController::class);
+    Route::resource('admin/b-category', Yb_BlogCategoryController::class);
     Route::resource('admin/booking', Yb_BookingController::class);
     Route::resource('admin/location', Yb_LocationController::class);
     Route::resource('admin/rating', Yb_ReviewRatingController::class);

@@ -50,7 +50,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{(Request::path() == 'admin/blogs' || Request::path() == 'admin/b-categories' || Request::path() == 'admin/comment')? 'menu-open':''}}" data-bs-toggle="collapse" href="#blog-page" aria-expanded="false" aria-controls="blog-page">
+                <a class="nav-link {{(Request::path() == 'admin/blogs' || Request::path() == 'admin/b-category' || Request::path() == 'admin/comment')? 'menu-open':''}}" data-bs-toggle="collapse" href="#blog-page" aria-expanded="false" aria-controls="blog-page">
                     <span class="menu-title">Blog</span>
                     <i class="menu-arrow"></i>
                     <i class="mdi mdi-crosshairs-gps menu-icon"></i>
@@ -58,7 +58,7 @@
                 <div class="collapse" id="blog-page">
                     <ul class="nav flex-column sub-menu">
                         <li class="nav-item"> <a class="nav-link {{(Request::path() == 'admin/blogs')? 'active':''}}" href="{{url('admin/blogs')}}">Blogs</a></li>
-                        <li class="nav-item"> <a class="nav-link {{(Request::path() == 'admin/b-categories')? 'active':''}}" href="{{url('admin/b-categories')}}">Category</a></li>
+                        <li class="nav-item"> <a class="nav-link {{(Request::path() == 'admin/b-category')? 'active':''}}" href="{{url('admin/b-category')}}">Blog Category</a></li>
                         <li class="nav-item"> <a class="nav-link {{(Request::path() == 'admin/comment')? 'active':''}}" href="{{url('admin/comment')}}">Comments</a></li>
                     </ul>
                 </div>

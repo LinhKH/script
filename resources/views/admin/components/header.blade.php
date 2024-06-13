@@ -129,6 +129,9 @@
             background: #0abb75;
             left: 18px;
         }
+        .error {
+            color: red;
+        }
         @media only screen and (max-width:767px){
             .checkbox{ margin: 0 0 20px; }
         }

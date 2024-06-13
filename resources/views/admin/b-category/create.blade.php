@@ -5,7 +5,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    @component('admin.components.content-header',['breadcrumb'=>['Dashboard'=>'admin/dashboard','Category'=>'admin/b-categories']])
+    @component('admin.components.content-header',['breadcrumb'=>['Dashboard'=>'admin/dashboard','Category'=>'admin/b-category']])
         @slot('title') Add Blog Category @endslot
         @slot('add_btn')  @endslot
         @slot('active') Add Blog Category @endslot
